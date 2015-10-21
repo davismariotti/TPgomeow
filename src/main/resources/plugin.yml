@@ -1,0 +1,21 @@
+name: TPgomeow
+main: info.gomeow.tpgomeow.TPgomeow
+version: maven-version-number
+description: TPA and TPHere
+author: gomeow
+commands:
+    tpa:
+        description: Allows user to send a tp request
+    tpaccept:
+        description: Allows a user to accept a tp request
+        alias: [tpyes]
+    tpdeny:
+        description: Allows a user to accept a tp request
+        alias: [tpno]
+permissions:
+    tpgomeow.tpa:
+        description: Allow user to use /tpa, /tpaccept, /tpdeny
+        default: true
+    tpgomeow.tphere:
+        description: Allow user to use /tphere
+        default: true
