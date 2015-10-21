@@ -6,6 +6,8 @@ author: gomeow
 commands:
     tpa:
         description: Allows user to send a tp request
+    tphere:
+        description: Allows user to send a tphere request
     tpaccept:
         description: Allows a user to accept a tp request
         aliases: [tpyes]
