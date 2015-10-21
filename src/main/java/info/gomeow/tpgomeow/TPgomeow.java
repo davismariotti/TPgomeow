@@ -66,7 +66,9 @@ public class TPgomeow extends JavaPlugin {
                         player.sendMessage(ChatColor.GREEN + "Teleported to " + teleportTo.getName());
                         player.sendMessage(ChatColor.GREEN + teleportTo.getName() + " teleported to you");
                         tpa.remove(player.getUniqueId());
-                        cooldown(player.getUniqueId());
+                        if (!sender.hasPermission("tpgomeow.bypass")) {
+                            cooldown(player.getUniqueId());
+                        }
                     } else {
                         sender.sendMessage(ChatColor.RED + "There is nothing to accept!");
                     }
