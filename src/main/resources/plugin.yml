@@ -8,10 +8,10 @@ commands:
         description: Allows user to send a tp request
     tpaccept:
         description: Allows a user to accept a tp request
-        alias: [tpyes]
+        aliases: [tpyes]
     tpdeny:
         description: Allows a user to accept a tp request
-        alias: [tpno]
+        aliases: [tpno]
 permissions:
     tpgomeow.tpa:
         description: Allow user to use /tpa, /tpaccept, /tpdeny
