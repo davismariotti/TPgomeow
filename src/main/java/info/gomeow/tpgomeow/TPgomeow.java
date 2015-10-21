@@ -63,11 +63,11 @@ public class TPgomeow extends JavaPlugin {
                     if (tpa.containsKey(player.getUniqueId())) {
                         Player teleportTo = getServer().getPlayer(tpa.get(player.getUniqueId()));
                         teleportTo.teleport(player);
-                        player.sendMessage(ChatColor.GREEN + "Teleported to " + teleportTo.getName());
+                        teleportTo.sendMessage(ChatColor.GREEN + "Teleported to " + teleportTo.getName());
                         player.sendMessage(ChatColor.GREEN + teleportTo.getName() + " teleported to you");
                         tpa.remove(player.getUniqueId());
                         if (!sender.hasPermission("tpgomeow.bypass")) {
-                            cooldown(player.getUniqueId());
+                            cooldown(teleportTo.getUniqueId());
                         }
                     } else {
                         sender.sendMessage(ChatColor.RED + "There is nothing to accept!");
