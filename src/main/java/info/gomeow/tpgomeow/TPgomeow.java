@@ -62,7 +62,7 @@ public class TPgomeow extends JavaPlugin {
                     Player player = (Player) sender;
                     if (tpa.containsKey(player.getUniqueId())) {
                         Player teleportTo = getServer().getPlayer(tpa.get(player.getUniqueId()));
-                        player.teleport(teleportTo);
+                        teleportTo.teleport(player);
                         player.sendMessage(ChatColor.GREEN + "Teleported to " + teleportTo.getName());
                         player.sendMessage(ChatColor.GREEN + teleportTo.getName() + " teleported to you");
                         tpa.remove(player.getUniqueId());
